@@ -1,6 +1,11 @@
 {
+  "Decrement": "Decrement",
+  "Increment": "Increment",
+  "decrement": "decrement",
+  "increment": "increment",
   "throw error": "throw error",
   "toggle": "toggle",
+  "value": "value",
   "Войти": "Войти",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
