@@ -1,31 +1,38 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import cls from './Navbar.module.scss';
+import { Modal } from 'shared/ui/Modal/Modal';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { useTranslation } from 'react-i18next';
 
 interface NavbarProps {
     className?: string;
 
 }
 
-export const Navbar = ({ className }: NavbarProps) => (
-    <div className={classNames(cls.Navbar, {}, [])}>
+export const Navbar = ({ className }: NavbarProps) => {
+    const { t } = useTranslation();
+    const [isAuthModal, setIsAuthModal] = useState(false);
+    const onToggleModal = useCallback(() => {
+        setIsAuthModal((prev) => !prev);
+    }, []);
+    return (
+        <div className={classNames(cls.Navbar, {}, [])}>
 
-        <div className={cls.links}>
-            <AppLink
-                theme={AppLinkTheme.SECONDARY}
-                to="/"
-                className={cls.mainLink}
+            <Button
+                theme={ButtonTheme.CLEAR_INVERTED}
+                className={cls.links}
+                onClick={onToggleModal}
             >
-                Главная
-            </AppLink>
-            <AppLink
-                to="/about"
-            >
-                О сайте
-            </AppLink>
+                {t('Войти')}
+            </Button>
+            <Modal
+                isOpen={isAuthModal}
+                onClose={onToggleModal}
+            />
         </div>
-    </div>
-);
+    );
+};
 
 export default Navbar;
