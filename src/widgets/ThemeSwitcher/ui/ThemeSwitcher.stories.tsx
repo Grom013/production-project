@@ -1,26 +1,22 @@
+import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-
-import { AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import { ThemeSwitcher } from './ThemeSwitcher';
 
 export default {
-    title: 'widgets/ThemeSwitcher',
+    title: 'widget/ThemeSwitcher',
     component: ThemeSwitcher,
     argTypes: {
-        backgroundColor: { control: true },
+        backgroundColor: { control: 'color' },
     },
-}as ComponentMeta<typeof ThemeSwitcher>;
+} as ComponentMeta<typeof ThemeSwitcher>;
 
 const Template: ComponentStory<typeof ThemeSwitcher> = (args) => <ThemeSwitcher {...args} />;
+
 export const Normal = Template.bind({});
-Normal.args = {
-    children: 'Text',
-    theme: AppLinkTheme.PRIMARY,
-};
+Normal.args = {};
 
 export const Dark = Template.bind({});
-Dark.args = {
-};
+Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
