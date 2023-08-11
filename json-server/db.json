@@ -15,5 +15,13 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "name": "Muhammad",
+    "lastname": "Grom",
+    "agw": 27,
+    "currency": "RUB",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "///"
+  }
 }
