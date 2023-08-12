@@ -1,12 +1,32 @@
 {
   "posts": [
-    { "id": "1", "title": "json-server1", "author": "typicode" },
-    { "id": "2", "title": "json-server2", "author": "typicode" },
-    { "id": "3", "title": "json-server3", "author": "typicode" },
-    { "id": "4", "title": "json-server4", "author": "typicode" }
+    {
+      "id": "1",
+      "title": "json-server1",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "title": "json-server2",
+      "author": "typicode"
+    },
+    {
+      "id": "3",
+      "title": "json-server3",
+      "author": "typicode"
+    },
+    {
+      "id": "4",
+      "title": "json-server4",
+      "author": "typicode"
+    }
   ],
   "comments": [
-    { "id": "1", "body": "some comment", "postId": "1" }
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": "1"
+    }
   ],
   "users": [
     {
@@ -16,12 +36,13 @@
     }
   ],
   "profile": {
-    "name": "Muhammad",
-    "lastname": "Grom",
-    "agw": 27,
+    "first": "Muhammadasd",
+    "lastname": "Gromasd",
+    "age": 2722,
     "currency": "RUB",
-    "city": "Moscow",
+    "city": "12Moscow12adasd",
     "username": "admin",
-    "avatar": "///"
+    "avatar": "///",
+    "country": "Armenia"
   }
 }
