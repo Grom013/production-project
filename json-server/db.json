@@ -36,13 +36,13 @@
     }
   ],
   "profile": {
-    "first": "Muhammadasd",
-    "lastname": "Gromasd",
-    "age": 2722,
+    "first": "Muhammad",
+    "lastname": "Grom",
+    "age": 27,
     "currency": "RUB",
-    "city": "12Moscow12adasd",
+    "city": "Moscow",
     "username": "admin",
-    "avatar": "///",
-    "country": "Armenia"
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/4/43/Hacker_behind_PC.svg",
+    "country": "Russia"
   }
 }
