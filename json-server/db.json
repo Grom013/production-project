@@ -29,7 +29,9 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -110,6 +112,36 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "asdasd",
+      "id": "0MzF3-B"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "asdasd",
+      "id": "J7NXain"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "adasd",
+      "id": "Dd0vpdV"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "adasdasd",
+      "id": "V1Ycdal"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "hello world",
+      "id": "DoGBxsY"
     }
   ],
   "users": [
@@ -128,14 +160,28 @@
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/4/43/Hacker_behind_PC.svg"
     }
   ],
-  "profile": {
-    "first": "Muhammad",
-    "lastname": "Grom",
-    "age": 27,
-    "currency": "RUB",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://upload.wikimedia.org/wikipedia/commons/4/43/Hacker_behind_PC.svg",
-    "country": "Russia"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Muhammad",
+      "lastname": "Grom",
+      "age": 27,
+      "currency": "RUB",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/4/43/Hacker_behind_PC.svg",
+      "country": "Russia"
+    },
+    {
+      "id": "2",
+      "first": "Muhammad",
+      "lastname": "Grom",
+      "age": 27,
+      "currency": "RUB",
+      "city": "Moscow",
+      "username": "admin013",
+      "avatar": "https://eadn-wc05-3736104.nxedge.io/wp-content/uploads/2022/03/AdobeStock_293068579_Compressed-scaled.jpeg",
+      "country": "Russia"
+    }
+  ]
 }
