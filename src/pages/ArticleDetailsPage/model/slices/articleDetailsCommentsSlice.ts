@@ -2,24 +2,22 @@ import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolki
 
 import { Comment } from 'entities/Comment';
 import { StateSchema } from 'app/providers/StoreProvider';
-import { ArticleDetailsCommentsSchema } from '../types/ArticleDetailsCommentSchema';
-import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById';
-import { Article } from 'entities/Article';
 import {
     fetchCommentsByArticleId,
 } from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage/model/types/ArticleDetailsCommentSchema';
 
-const coomentsAdapter = createEntityAdapter<Comment>({
+const commentsAdapter = createEntityAdapter<Comment>({
     selectId: (comment) => comment.id,
 });
 
-export const getArticleComments = coomentsAdapter.getSelectors<StateSchema>(
-    (state) => state.articleDetailsComments || coomentsAdapter.getInitialState(),
+export const getArticleComments = commentsAdapter.getSelectors<StateSchema>(
+    (state) => state.articleDetailsPage?.comments || commentsAdapter.getInitialState(),
 );
 
 const articleDetailsCommentsSlice = createSlice({
     name: 'articleDetailsCommentsSlice',
-    initialState: coomentsAdapter.getInitialState<ArticleDetailsCommentsSchema>({
+    initialState: commentsAdapter.getInitialState<ArticleDetailsCommentsSchema>({
         isLoading: false,
         error: undefined,
         ids: [],
@@ -32,9 +30,12 @@ const articleDetailsCommentsSlice = createSlice({
                 state.error = undefined;
                 state.isLoading = true;
             })
-            .addCase(fetchCommentsByArticleId.fulfilled, (state, action:PayloadAction<Comment[]>) => {
+            .addCase(fetchCommentsByArticleId.fulfilled, (
+                state,
+                action: PayloadAction<Comment[]>,
+            ) => {
                 state.isLoading = false;
-                coomentsAdapter.setAll(state, action.payload);
+                commentsAdapter.setAll(state, action.payload);
             })
             .addCase(fetchCommentsByArticleId.rejected, (state, action) => {
                 state.isLoading = false;
