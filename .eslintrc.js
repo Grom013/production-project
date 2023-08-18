@@ -18,6 +18,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
+        'muhammad-app-plugin',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -40,7 +41,16 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'name', 'label', 'target'],
+            ignoreAttribute: [
+                'data-testid',
+                'to',
+                'name',
+                'label',
+                'target',
+                'justify',
+                'align',
+                'direction',
+                'gap'],
         }],
         'max-len': 'off',
         'import/order': 'off',
@@ -52,6 +62,7 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
+        'muhammad-app-plugin/path-checker': 'error',
     },
     globals: {
         __IS_DEV__: true,
