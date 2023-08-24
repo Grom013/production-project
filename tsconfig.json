@@ -19,6 +19,7 @@
       "*": ["./src/*"]
     },
     "esModuleInterop": true,
+    "isolatedModules": true,
     "allowSyntheticDefaultImports": true
   },
   "ts-node": {
