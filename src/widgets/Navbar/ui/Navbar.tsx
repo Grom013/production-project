@@ -3,17 +3,16 @@ import { useTranslation } from 'react-i18next';
 import React, { memo, useCallback, useState } from 'react';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { LoginModal } from 'features/AuthByUsername';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import {
-    getUserAuthData, isUserAdmin, isUserManager, userActions,
+    getUserAuthData,
 } from 'entities/User';
-import cls from './Navbar.module.scss';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-
 import { HStack } from 'shared/ui/Stack';
 import { NotificationButton } from 'features/notificationButton';
+import cls from './Navbar.module.scss';
 import { AvatarDropdown } from 'features/avatarDropdown/ui/AvatarDropDown/AvatarDropdown';
 
 interface NavbarProps {
@@ -37,22 +36,21 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
                 <Text
-                    theme={TextTheme.INVERTED}
                     className={cls.appName}
-                    title={t('Muhammads App')}
+                    title={t('Ulbi TV App')}
+                    theme={TextTheme.INVERTED}
                 />
                 <AppLink
-                    className={cls.createBtn}
-                    theme={AppLinkTheme.SECONDARY}
                     to={RoutePath.article_create}
+                    theme={AppLinkTheme.SECONDARY}
+                    className={cls.createBtn}
                 >
-                    {t('Cоздать статью')}
+                    {t('Создать статью')}
                 </AppLink>
                 <HStack gap="16" className={cls.actions}>
                     <NotificationButton />
                     <AvatarDropdown />
                 </HStack>
-
             </header>
         );
     }
