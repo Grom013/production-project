@@ -23,7 +23,7 @@ import {
     getArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetails';
 import { ArticleBlock } from '../../model/types/article';
-import { ArticleBlockType } from '@/entities/Article/model/consts/articleConsts';
+import { ArticleBlockType } from '@/entities/Article';
 
 interface ArticleDetailsProps {
     className?: string;

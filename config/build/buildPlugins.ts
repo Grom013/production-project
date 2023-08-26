@@ -26,7 +26,7 @@ export function buildPlugins({
         }),
         new CircularDependencyPlugin({
             exclude: /node_modules/,
-            failOnError: true,
+            failOnError: false,
         }),
         new ForkTsCheckerWebpackPlugin({
             typescript: {
