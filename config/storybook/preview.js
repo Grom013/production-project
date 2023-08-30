@@ -2,7 +2,9 @@ import { addDecorator } from '@storybook/react';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorator/RouterDecorator';
-import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator/SuspenseDecorator';
+import {
+    SuspenseDecorator,
+} from '../../src/shared/config/storybook/SuspenseDecorator/SuspenseDecorator';
 import { Theme } from '../../src/shared/const/theme';
 
 export const parameters = {
@@ -14,12 +16,14 @@ export const parameters = {
         },
     },
     layout: 'fullscreen',
-    default: 'light',
-    list: [
-        { name: 'light', class: Theme.LIGHT, color: '#ffffff' },
-        { name: 'dark', class: Theme.DARK, color: '#000000' },
-        { name: 'green', class: Theme.GREEN, color: '#35501d' },
-    ],
+    themes: {
+        default: 'light',
+        list: [
+            { name: 'light', class: Theme.LIGHT, color: '#ffffff' },
+            { name: 'dark', class: Theme.DARK, color: '#000000' },
+            { name: 'green', class: Theme.GREEN, color: '#9bff05' },
+        ],
+    },
 };
 
 addDecorator(StyleDecorator);
