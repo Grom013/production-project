@@ -8,7 +8,7 @@ import cls from './ArticlesPage.module.scss';
 
 import { articlesPageReducer } from '../../model/slices/articlePageSlice';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
-import { ArticlesPageFilters, ArticleInfiniteList } from '@/pages/ArticlesPage';
+import { ArticlesPageFilters, ArticleInfiniteList } from '../..';
 
 interface ArticlesPageProps {
     className?: string;
@@ -29,6 +29,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
             <Page
+                data-testid="ArticlesPage"
                 onScrollEnd={onLoadNextPart}
                 className={classNames(cls.ArticlesPage, {}, [className])}
             >

@@ -676,6 +676,16 @@
         "MANAGER"
       ],
       "avatar": "https://img.freepik.com/free-photo/html-and-css-collage-concept-with-hacker_23-2150061984.jpg?w=2000"
+    },
+
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "MANAGER"
+      ],
+      "avatar": "https://img.freepik.com/free-photo/html-and-css-collage-concept-with-hacker_23-2150061984.jpg?w=2000"
     }
   ],
   "profile": [
